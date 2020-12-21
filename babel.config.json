@@ -1,0 +1,25 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "node": "current"
+        },
+        "modules": "commonjs",
+        "spec": true
+      }
+    ]
+  ],
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "root": [
+          "./src"
+        ],
+        "alias": {}
+      }
+    ]
+  ]
+}

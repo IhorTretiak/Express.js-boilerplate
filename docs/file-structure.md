@@ -1,0 +1,22 @@
+## 📁 File structure
+
+- `/docs` contains project documentation;
+- `/src` contains our code:
+  - `/env` - get env variables, check them;
+  - `/utils` - utils and custom libraries;
+  - `index.jsx` - the entry-point for our app;
+- `.commitlintrc` - [Read more](https://commitlint.js.org/);
+- `.dockerignore` - [Read more](https://docs.docker.com/engine/reference/builder/#dockerignore-file);
+- `.editorconfig` - [Read more](https://editorconfig.org/);
+- `.env*`- [Read more](https://en.wikipedia.org/wiki/Environment_variable#:~:text=An%20environment%20variable%20is%20a,in%20which%20a%20process%20runs.);
+- `.eslintrc` - [Read more](https://eslint.org/);
+- `.gitignore` - [Read more](https://git-scm.com/docs/gitignore);
+- `.lintstagedrc` - [Read more](https://github.com/okonet/lint-staged);
+- `.npmrc` - [Read more](https://docs.npmjs.com/cli/v6/configuring-npm/npmrc);
+- `.nvmrc` - [Read more](https://github.com/nvm-sh/nvm#nvmrc);
+- `docker-compose` - [Read more](https://docs.docker.com/compose/compose-file/);
+- `Docker` - [Read more](https://docs.docker.com/engine/reference/builder/);
+- `LICENSE` - [Read more](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/licensing-a-repository);
+- `package.json` - [Read more](https://docs.npmjs.com/cli/v6/configuring-npm/package-json);
+- `package-lock.json` - [Read more](https://docs.npmjs.com/cli/v6/configuring-npm/package-lock-json);
+- `README.md` - [Read more](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/about-readmes);

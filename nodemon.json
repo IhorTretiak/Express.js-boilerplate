@@ -1,0 +1,20 @@
+{
+  "restartable": "rs",
+  "verbose": false,
+  "ignore": [
+    ".git",
+    "node_modules/**/node_modules"
+  ],
+  "watch": [
+    "./src",
+    "./package.json"
+  ],
+  "events": {
+    "restart": "osascript -e 'display notification \"App restarted due to:\n'$FILENAME'\" with title \"nodemon\"'"
+  },
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "exec": "node -r dotenv/config -r @babel/register ./src/index.js",
+  "ext": "js, json, yaml, yml"
+}

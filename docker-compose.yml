@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  mongo_db:
+    container_name: mongo_db
+    restart:        always
+    image:          mongo:latest
+    env_file:
+      - .env
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_DB_ROOT_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_DB_ROOT_PASSWORD}
+      MONGO_INITDB_DATABASE:      ${MONGO_DB_DATABASE}
+    ports:
+      - 27017:27017
+    volumes:
+      - ./src/databases/data/:/data/db
+      - ./src/databases/seeds/:/docker-entrypoint-initdb.d/
+
+  redis_db:
+    container_name: redis_db
+    restart:        always
+    image:          redis:latest
+    env_file:
+      - .env
+    environment:
+      REDIS_PASSWORD: ${REDIS_DB_ROOT_PASSWORD}
+    ports:
+      - 6379:6379
+    command: ['sh', '-c', 'exec redis-server --requirepass ${REDIS_DB_ROOT_PASSWORD}']

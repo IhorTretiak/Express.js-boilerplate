@@ -1,0 +1,43 @@
+# 0 - off
+# 1 - warning
+# 2 - error
+
+parser: babel-eslint
+
+parserOptions:
+  ecmaVersion: 2021
+  sourceType:  module
+  ecmaFeatures:
+    impliedStrict: true
+
+plugins: [
+  'import'
+]
+
+extends: [
+  'airbnb-base',
+  'plugin:import/errors',
+  'plugin:import/warnings',
+  'plugin:jest/recommended',
+]
+
+settings:
+  import/resolver:
+    node:
+      paths: ['src']
+
+rules:
+  # ESLint (https://eslint.org/docs/rules/)
+  func-names: [2, 'as-needed']
+  newline-before-return:             2
+  no-multiple-empty-lines: [2, { max: 2 }]
+  max-len: [2, 120]
+  key-spacing: [2, { 'align': 'value' }]
+  no-use-before-define: [2, { functions: false }]
+  # ESLint Plugin Import (https://github.com/benmosher/eslint-plugin-import)
+  import/newline-after-import: [2, { count: 2 }]
+  import/no-unresolved: [2, { ignore: ['^@\w'] }]
+  import/prefer-default-export:      0
+  import/no-extraneous-dependencies: 0
+  # ESLint Plugin Jest (https://github.com/jest-community/eslint-plugin-jest)
+  jest/no-done-callback:             0
